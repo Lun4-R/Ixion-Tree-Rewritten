@@ -205,10 +205,10 @@ function letter(decimal, precision, str) { //AD NG+++
     if (isNaN(skipped.sign)||isNaN(skipped.layer)||isNaN(skipped.mag)) skipped = new Decimal(0)
     skipped = skipped.add(7)
     let lett = Decimal.mul(1e9,Decimal.log10(len))
-    let s = slog(skipped).sub(slog(lett)).div(2).floor().add(1)
-    let sl = tet10(slog(skipped).sub(slog(skipped).sub(slog(lett)).div(2).floor().mul(2))).mul(Decimal.log(10,len))
+    let s = Decimal.slog(skipped).sub(Decimal.slog(lett)).div(2).floor().add(1)
+    let sl = Decimal.tetrate(Decimal.slog(skipped).sub(Decimal.slog(skipped).sub(Decimal.slog(lett)).div(2).floor().mul(2)), 10).mul(Decimal.log(10,len))
     if (decimal.layer >= 1e9) return '{'+formatWhole(s)+'}'
-    if (decimal.gte(tet10(slog(lett).add(8)))) return format(sl)+'{'+formatWhole(s)+'}'
+    if (decimal.gte(Decimal.tetrate(Decimal.slog(lett).add(8))), 10) return format(sl)+'{'+formatWhole(s)+'}'
     if (skipped.gte(1e9)) return "["+letter(skipped, precision, str)+"]"
     if (skipped.gt(7)) ret += "[" + commaFormat(skipped, 0) + "]"
     if (decimal.gte("ee9")) return ret
@@ -451,6 +451,14 @@ function toPlaces(x, precision, maxAccepted) {
 
 // Will also display very small numbers
 function formatSmall(x, precision=2) {
+    return format(x, precision, true)
+}
+
+function formatESmall(x, precision=4) {
+    return format(x, precision, true)
+}
+
+function formatAtSmall(x, precision=6) {
     return format(x, precision, true)
 }
 

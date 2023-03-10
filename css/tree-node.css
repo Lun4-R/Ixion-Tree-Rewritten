@@ -16,7 +16,7 @@
 
 .nodeLabel {
 	font: inherit;
-font-family: 'Inter Tight', sans-serif;;
+	font-family: 'Inter Tight', sans-serif;
 }
 
 .treeButton {
@@ -27,7 +27,7 @@ font-family: 'Inter Tight', sans-serif;;
 	border-radius: 33%;
 	box-shadow: var(--hqProperty2a), var(--hqProperty2b);
 	font-size: 40px;
-	font-family: 'Inter Tight', sans-serif;
+	font-family: 'Be Vietnam Pro', sans-serif;
 	color: rgba(0, 0, 0, 0.5);
 	text-shadow: var(--hqProperty3);
 	padding: 0;

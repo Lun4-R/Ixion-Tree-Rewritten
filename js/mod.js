@@ -1,9 +1,14 @@
 let modInfo = {
-	name: "The Ixion Tree",
+	name: "The Ixion Tree RE",
 	id: "ATAAGO DS II",
 	author: "Niko_",
 	pointsName: "Time Fabrics",
-	modFiles: ["GameData/L0-L2/ReFLayer0.js","GameData/L0-L2/ReFLayer1.js","GameData/L0-L2/ReFLayer2.js", "InfoLayer.js", "tree.js"],
+	modFiles: ["GameData/L0-L2/ReFLayer0.js",
+		/*"GameData/L0-L2/ReFLayer1.js",*/ /* Neutrona layer ( obselote and unusused )*/
+		"GameData/L0-L2/ReFLayer2.js", 
+		"GameData/SpecialLayers/Automation.js", 
+		/*"InfoLayer.js", */ /* Ixion Tree Lore be like */
+		"tree.js"],
 
 	discordName: "",
 	discordLink: "",
@@ -13,14 +18,25 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "GTT 1.002",
-	name: "Pre-Infinity",
+	num: "GTT 1.003",
+	name: "Prelude to Infinity",
 }
 
-let changelog = `<h1>Changelog:</h1><br>
-	<h3>v0.0</h3><br>
-		- Added things.<br>
-		- Added stuff.`
+let changelog = `<h1 style="font-weight: 100">Changelog:</h1><br>
+	<h3><b style=" font-size: 33px; background: -webkit-linear-gradient(#df8dff, #8db9ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 1000">GTT 1.003</b><br>
+		<br>
+		<div style="font-weight: 100">
+		- Reworked Matter Dimension logic because I managed to make <br>
+		timewall simulator 2023 edition deluxe...<br>
+		<br>
+		- Removed Neutron ( Neutrona ) layer due to its unusuability. <br>
+		<br>
+		- Though Proton ( Protona ) layer got some serious buffs and changes.<br>
+		<br>
+		- Big thanks for @EmJov#5025 for making a QoL game suggestion =). <br>
+		You can now toggle Matter automation On and Off + Tickspeed <br>
+		 gets affected by it aswell!
+		</div>`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
 
@@ -54,8 +70,10 @@ function addedPlayerData() { return {
 var displayThings = [
 	function() {
 		let a = `<br>Pre-Float Skill Tree<br>`
-		let b = `There is no real Endgame`
 		if (player.M.best.gte(1.17e38)) return a = `<br>Post-Float Skill Tree<br>`
+		if (player.M.best.gte(1e200)) return a = `<br>Pre-Infinity Skill Tree<br>`
+		if (player.M.best.gte(1.78e308)) return a = `<br>Post-Infinity Skill Tree<br>`
+		let b = `There is no real Endgame`
 		return a + b
 		
 		

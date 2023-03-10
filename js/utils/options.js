@@ -17,7 +17,7 @@ function getStartOptions() {
 		notation: "Scientific",
 	}
 }
-let notations = ['Scientific','Engineering','Standard']
+let notations = ['Scientific','Engineering','Standard', 'Letters']
 
 function changeNotation() {
 	player.notation = notations[(notations.indexOf(player.notation) + 1) % notations.length]

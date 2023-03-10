@@ -1,24 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
 .M.treeNode {
+    background: linear-gradient(180deg, rgba(223,141,255,1) 0%, rgba(141,185,255,1) 100%);
     border-radius: 5px;
     border: 0px;
     width: 90px;
     height: 90px;
+    box-shadow: 3px 3px 0px #ffffff;
 }
 
-.N.treeNode {
-    border-radius: 5px;
-    border: 0px;
-    width: 90px;
-    height: 90px;
+.M.treeNode.can:hover {
+    box-shadow: 3px 3px 15px #ffffff;
 }
 
 .P.treeNode {
+    background: linear-gradient(180deg, rgba(255,93,93,1) 0%, rgba(255,72,146,1) 100%);
     border-radius: 5px;
     border: 0px;
     width: 90px;
     height: 90px;
+    box-shadow: 3px 3px 0px #ffffff;
+}
+
+.P.treeNode.can:hover {
+    box-shadow: 3px 3px 15px #ffffff;
+}
+
+.A.smallNode {
+    color: white;
+    background: rgb(161,8,8);
+    background: linear-gradient(180deg, rgba(161,8,8,1) 0%, rgba(255,90,0,1) 100%);
+    border-radius: 5px;
+    border: 0px;
+    width: 70px;
+    height: 70px;
+    box-shadow: 3px 3px 0px #ffffff;
+}
+
+.A.smallNode.can:hover {
+    box-shadow: 3px 3px 15px #ffffff;
 }
 
 
@@ -27,19 +47,6 @@
     border: 0px;
     width: 70px;
     height: 70px;
-}
-
-.SK.treeNode {
-    border-radius: 5px;
-    border: 0px;
-    width: 90px;
-    height: 90px;
-}
-.SK.upg {
-    color: white;
-    margin: 20px;
-    border: 0px;
-    border-radius: 2.5px;
 }
 
 .M.upg {
@@ -54,29 +61,9 @@
     border: 2px;
 }
 
-.N.reset {
-    border: 0px;
-    border-radius: 5px
-    background: rgb(144,144,144);
-    background: linear-gradient(180deg, rgba(144,144,144,1) 0%, rgba(45,45,45,1) 100%);
-}
-
-.N.upg {
-
-    border: 0px;
-    border-radius: 2.5px;
-}
-
-.N.tabButton {
-    border-radius: 0px;
-    border: 2px;
-}
-
 .P.reset {
     border: 0px;
-    border-radius: 5px
-    background: rgb(144,144,144);
-    background: linear-gradient(180deg, rgba(144,144,144,1) 0%, rgba(45,45,45,1) 100%);
+    border-radius: 5px;
 }
 
 .P.upg {
@@ -93,22 +80,12 @@
 .P.milestone {
     border-radius: 0px;
     border: 2px;
+    margin: 5px;
 }
 
 .P.milestoneDone {
     border-radius: 0px;
     border: 2px;
-    background: rgb(199,0,0);
-    background: linear-gradient(180deg, rgba(199,0,0,1) 0%, rgba(61,0,0,1) 100%);
-}
+    margin: 5px;
 
-.L2.reset {
-    border: 0px;
-    border-radius: 5px
-}
-
-.L2.upg {
-    margin: 2px;
-    border: 0px;
-    border-radius: 2.5px;
 }

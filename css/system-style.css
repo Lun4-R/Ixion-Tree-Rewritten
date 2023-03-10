@@ -1,5 +1,5 @@
 * {
-	transition-duration: 0.5s;
+	transition-duration: 0.15s;
 	text-align: center;
 	font-family: 'Inter Tight', sans-serif;
 	font-weight: bold;
@@ -86,7 +86,7 @@ td {
 }
 
 .back:hover {
-	transform: scale(1.1, 1.1);
+	transform: scale(1.05, 1.05);
 	text-shadow: 0 0 7px var(--color);
 }
 
@@ -114,7 +114,7 @@ td {
 }
 
 .remove:hover {
-	transform: scale(1.1, 1.1);
+	transform: scale(1.05, 1.05);
 }
 
 .col {
